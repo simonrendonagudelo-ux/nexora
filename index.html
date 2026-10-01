@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXORA | Contenido Digital</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Paleta de colores NEXORA - Estética Robótica / Tech Dark */
+        :root {
+            --bg-navy: #030712;
+            --bg-card: #0A0F1D;
+            --electric-blue: #00E5FF;
+            --text-muted: #94A3B8;
+            --border-glow: rgba(0, 229, 255, 0.2);
+        }
+
+        body.bg-navy {
+            background-color: var(--bg-navy) !important;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #F8FAFC;
+        }
+
+        /* Fondo con patrón robótico y acentos oscuros */
+        .hero-section {
+            min-height: 100vh;
+            padding-top: 100px;
+            background: linear-gradient(135deg, #030712 0%, #080C19 50%, #020408 100%),
+                        radial-gradient(circle at 50% 20%, rgba(0, 229, 255, 0.08) 0%, transparent 60%);
+        }
+
+        .bg-section-dark {
+            background-color: var(--bg-card);
+            border-top: 1px solid rgba(0, 229, 255, 0.05);
+            border-bottom: 1px solid rgba(0, 229, 255, 0.05);
+        }
+
+        .bg-dark-custom {
+            background-color: rgba(3, 7, 18, 0.9) !important;
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-glow);
+        }
+
+        .text-electric {
+            color: var(--electric-blue) !important;
+            text-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+        }
+
+        .text-secondary-custom {
+            color: var(--text-muted) !important;
+        }
+
+        /* Tarjetas de tecnología y procesos */
+        .tech-badge {
+            background-color: rgba(0, 229, 255, 0.05);
+            border: 1px solid rgba(0, 229, 255, 0.2);
+            color: var(--electric-blue);
+            transition: all 0.3s ease;
+        }
+
+        .tech-badge:hover {
+            background-color: var(--electric-blue);
+            color: var(--bg-navy);
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+        }
+
+        /* Sombra y marcos futuristas para las imágenes */
+        .shadow-cyber {
+            border: 1px solid var(--border-glow);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 229, 255, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .shadow-cyber:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 35px rgba(0, 229, 255, 0.3);
+        }
+
+        /* Botón estilo eléctrico */
+        .btn-electric {
+            background-color: transparent;
+            color: var(--electric-blue);
+            border: 2px solid var(--electric-blue);
+            transition: all 0.3s ease;
+            font-weight: 600;
+            box-shadow: 0 0 10px rgba(0, 229, 255, 0.1);
+        }
+
+        .btn-electric:hover {
+            background-color: var(--electric-blue);
+            color: var(--bg-navy);
+            box-shadow: 0 0 25px rgba(0, 229, 255, 0.6);
+        }
+
+        /* Botón flotante de WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50px;
+            padding: 12px 22px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-navy text-light">
+
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-electric d-flex align-items-center gap-2" href="#">
+                <img src="logo-nexora.jpg" alt="NEXORA Logo" height="30" class="rounded"> NEXORA<span class="text-white">.</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link" href="#quienes-somos">Quiénes Somos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#como-trabajamos">Cómo Trabajamos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tecnologias">Tecnologías</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero (Principal) -->
+    <header class="hero-section d-flex align-items-center text-center">
+        <div class="container">
+            <img src="logo-nexora.jpg" alt="NEXORA" class="img-fluid mb-4 hero-logo rounded shadow-cyber" style="max-height: 140px;">
+            <h1 class="display-4 fw-bold mb-3">Ideas que se convierten en contenido</h1>
+            <p class="lead text-secondary-custom mb-4">Agencia de contenido digital de alto rendimiento liderada desde Anserma, Caldas.</p>
+            <a href="#contacto" class="btn btn-electric btn-lg px-4 py-2">Iniciar Proyecto</a>
+        </div>
+    </header>
+
+    <!-- Sección 1: Quiénes Somos -->
+    <section id="quienes-somos" class="py-5 bg-section-dark">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold text-electric mb-4">¿Quiénes Somos?</h2>
+                    <p class="text-secondary-custom fs-5">En <strong>NEXORA</strong> transformamos la visión y los objetivos de las marcas en experiencias digitales impactantes y memorables.</p>
+                    <p class="text-secondary-custom">Operando desde Anserma, Caldas, combinamos diseño vanguardista, estrategia corporativa y desarrollo tecnológico para destacar en el entorno digital. Nuestro compromiso es ofrecer un estándar visual y técnico de nivel internacional, ayudando a negocios y proyectos locales a escalar al siguiente nivel con identidad propia.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="mockup-oficina.jpg" alt="Oficina NEXORA" class="img-fluid rounded shadow-cyber">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 2: Cómo Trabajamos -->
+    <section id="como-trabajamos" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-electric">Cómo Trabajamos</h2>
+                <p class="text-secondary-custom">Un proceso estructurado para garantizar resultados profesionales y de alto impacto.</p>
+            </div>
+            <div class="row g-4 align-items-center mb-5">
+                <div class="col-lg-6 order-lg-2">
+                    <h3 class="fw-bold mb-3 text-white">Precisión, Estrategia y Estilo</h3>
+                    <p class="text-secondary-custom">Cada proyecto en NEXORA sigue una metodología rigurosa:</p>
+                    <ul class="text-secondary-custom list-unstyled d-flex flex-column gap-2">
+                        <li>🚀 <strong>1. Planificación y Propuesta:</strong> Definimos la identidad, el alcance y los objetivos visuales del cliente.</li>
+                        <li>🎨 <strong>2. Diseño y Modelado:</strong> Creamos los elementos gráficos, maquetación UI/UX o animaciones en alta definición.</li>
+                        <li>🎥 <strong>3. Producción Audiovisual:</strong> Ejecutamos la edición y el montaje con un estándar tecnológico superior.</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <img src="produccion-estudio.jpg" alt="Producción NEXORA" class="img-fluid rounded shadow-cyber">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 3: Stack Tecnológico -->
+    <section id="tecnologias" class="py-5 bg-section-dark">
+        <div class="container py-4 text-center">
+            <h2 class="fw-bold text-electric mb-3">Herramientas y Tecnologías</h2>
+            <p class="text-secondary-custom mb-4">Utilizamos software y lenguajes de vanguardia para garantizar calidad óptima.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <span class="tech-badge px-4 py-2 rounded-pill fw-bold">HTML5 / CSS3</span>
+                <span class="tech-badge px-4 py-2 rounded-pill fw-bold">JavaScript</span>
+                <span class="tech-badge px-4 py-2 rounded-pill fw-bold">Bootstrap 5</span>
+                <span class="tech-badge px-4 py-2 rounded-pill fw-bold">Blender 3D</span>
+                <span class="tech-badge px-4 py-2 rounded-pill fw-bold">Canva & Affinity</span>
+                <span class="tech-badge px-4 py-2 rounded-pill fw-bold">Visual Studio Code</span>
+                <span class="tech-badge px-4 py-2 rounded-pill fw-bold">GitHub Pages</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 4: Contacto y Redes Sociales -->
+    <section id="contacto" class="py-5 border-top border-electric-subtle">
+        <div class="container text-center py-4">
+            <h2 class="fw-bold text-electric mb-3">Hablemos de tu Próximo Proyecto</h2>
+            <p class="text-secondary-custom mb-4">Estamos listos para materializar tus ideas.</p>
+            <div class="fs-4 mb-4">
+                📞 <a href="https://wa.me/573235407807" target="_blank" class="text-white text-decoration-none fw-bold">323 540 7807</a>
+            </div>
+            <div class="d-flex justify-content-center gap-4 fs-5 mb-4">
+                <a href="#" class="text-electric text-decoration-none">Instagram</a>
+                <a href="https://wa.me/573235407807" target="_blank" class="text-electric text-decoration-none">WhatsApp</a>
+                <a href="#" class="text-electric text-decoration-none">GitHub</a>
+            </div>
+            <p class="text-secondary-custom small">Anserma, Caldas, Colombia &bull; NEXORA &copy; 2026</p>
+        </div>
+    </section>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/573235407807?text=Hola%20NEXORA,%20estoy%20interesado%20en%20sus%20servicios%20digitales." target="_blank" class="whatsapp-float">
+        💬 WhatsApp
+    </a>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
